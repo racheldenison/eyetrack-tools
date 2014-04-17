@@ -10,4 +10,5 @@ rd_eyeLink.m contains many EyeLink PTB commands you might need when doing online
 rd_eyeTrackTester.m is a demo of how to use rd_eyeLink.m to communicate with the EyeLink and do online eyetracking. This script can also be used to test rd_eyeLink.m.
 
 Rachel Denison
+
 April 2014
