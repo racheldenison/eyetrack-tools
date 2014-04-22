@@ -203,11 +203,15 @@ switch command
             x = evt.gx(domEye);
             y = evt.gy(domEye);
             
-            % check eye position
-            if sqrt((x-cx)^2+(y-cy)^2)<rad
-                fixation = 1;
-            else
+            % check for blink
+            if isempty(x) || isempty(y)
                 fixation = 0;
+                % check eye position
+                if sqrt((x-cx)^2+(y-cy)^2)<rad
+                    fixation = 1;
+                else
+                    fixation = 0;
+                end
             end
             
             % update duration of current fixation
